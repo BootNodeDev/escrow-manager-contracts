@@ -1,7 +1,7 @@
 {
-  "name": "poc-escrow-manager",
+  "name": "poc-escrow-manager-contracts",
   "version": "1.0.0",
-  "repository": "https://github.com/BootNodeDev/nexus-covered-vaults.git",
+  "repository": "https://github.com/BootNodeDev/poc-escrow-manager-contracts.git",
   "license": "UNLICENSED",
   "scripts": {
     "compile": "hardhat compile",
