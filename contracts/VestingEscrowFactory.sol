@@ -140,36 +140,63 @@ contract VestingEscrowFactory {
   }
 
   function getEscrowsByRecipient(address recipient) external view returns (Escrow[] memory) {
-    Escrow[] memory list = new Escrow[](escrows.length);
+    Escrow[] memory tempList = new Escrow[](escrows.length);
+
+    uint256 j = 0;
 
     for (uint256 i = 0; i < escrows.length; i++) {
       if (escrows[i].recipient == recipient) {
-        list[i] = escrows[i];
+        tempList[j] = escrows[i];
+        j++;
       }
+    }
+
+    Escrow[] memory list = new Escrow[](j);
+
+    for (uint256 i = 0; i < j; i++) {
+      list[i] = tempList[i];
     }
 
     return list;
   }
 
   function getEscrowsByDeployer(address deployer) external view returns (Escrow[] memory) {
-    Escrow[] memory list = new Escrow[](escrows.length);
+    Escrow[] memory tempList = new Escrow[](escrows.length);
+
+    uint256 j = 0;
 
     for (uint256 i = 0; i < escrows.length; i++) {
       if (escrows[i].deployer == deployer) {
-        list[i] = escrows[i];
+        tempList[j] = escrows[i];
+        j++;
       }
+    }
+
+    Escrow[] memory list = new Escrow[](j);
+
+    for (uint256 i = 0; i < j; i++) {
+      list[i] = tempList[i];
     }
 
     return list;
   }
 
   function getEscrowsByAdmin(address admin) external view returns (Escrow[] memory) {
-    Escrow[] memory list = new Escrow[](escrows.length);
+    Escrow[] memory tempList = new Escrow[](escrows.length);
+
+    uint256 j = 0;
 
     for (uint256 i = 0; i < escrows.length; i++) {
       if (escrows[i].admin == admin) {
-        list[i] = escrows[i];
+        tempList[j] = escrows[i];
+        j++;
       }
+    }
+
+    Escrow[] memory list = new Escrow[](j);
+
+    for (uint256 i = 0; i < j; i++) {
+      list[i] = tempList[i];
     }
 
     return list;
