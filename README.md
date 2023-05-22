@@ -19,6 +19,13 @@ Compile the smart contracts with Hardhat:
 $ yarn compile
 ```
 
+### Compile contracts for zksync era
+Compile the smart contracts with Hardhat:
+
+```sh
+$ yarn compile-zk
+```
+
 ### Test
 Run unit tests:
 
